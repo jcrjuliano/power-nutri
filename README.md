@@ -41,3 +41,18 @@ docker-compose up -d
 ``
 
 O banco de dados estará acessível na porta padrão 5432.
+
+### Execução do Projeto
+
+Para executar o projeto, você pode usar o Maven. Navegue até a raiz do projeto e execute o seguinte comando:
+
+``
+.\mvnw spring-boot:run
+``
+
+O projeto estará acessível em http://localhost:8080.
+
+### Documentação da API
+
+A documentação pode ser encontrada usando swagger: http://localhost:8080/swagger-ui/index.html
+
