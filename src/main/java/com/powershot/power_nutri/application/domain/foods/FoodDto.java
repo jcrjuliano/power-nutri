@@ -37,7 +37,7 @@ public class FoodDto {
         return new FoodDto(entity.getId(), entity.getGroup(), entity.getDescription(), entity.getSlug(), entity.getMoisture(), entity.getEnergyKcal(), entity.getEnergyKj(), entity.getProteinG(), entity.getCarbohydrateG(), entity.getGroupSlug());
     }
 
-    public static List<FoodDto> fromEntity(List<FoodEntity> entities) {
+    public static List<FoodDto> fromEntities(List<FoodEntity> entities) {
         return entities.stream().map(FoodDto::fromEntity).toList();
     }
 

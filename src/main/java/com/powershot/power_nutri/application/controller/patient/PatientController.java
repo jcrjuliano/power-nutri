@@ -5,6 +5,9 @@ import com.powershot.power_nutri.application.domain.patient.SavePatientRequestDt
 import com.powershot.power_nutri.application.usecase.patient.FindPatientByIdService;
 import com.powershot.power_nutri.application.usecase.patient.ListAllPatientsService;
 import com.powershot.power_nutri.application.usecase.patient.SavePatientService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,6 +31,12 @@ public class PatientController {
     @Autowired
     private FindPatientByIdService findPatientByIdService;
 
+
+    @Operation(summary = "Save a patient")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Patient saved successfully"),
+            @ApiResponse(responseCode = "404", description = "Patient not found")
+            })
     @PostMapping("/")
     public ResponseEntity<PatientDto> save(@RequestBody SavePatientRequestDto patient){
         try {

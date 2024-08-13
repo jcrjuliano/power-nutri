@@ -27,8 +27,10 @@ public class FoodEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "grupo")
     private String group;
 
+    @Column(name = "descricao")
     private String description;
 
     private String slug;

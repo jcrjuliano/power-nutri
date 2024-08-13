@@ -13,7 +13,8 @@ public class FindNutritionProgramByIdService {
     private NutritionProgramRepository nutritionProgramRepository;
 
     public NutritionProgramDto execute(Long nutritionProgramId) {
-        return NutritionProgramDto.fromEntity(nutritionProgramRepository.findById(nutritionProgramId).orElseThrow(() -> new EntityNotFoundException("Nutrition Program not found."));
+        return NutritionProgramDto.fromEntity(
+                nutritionProgramRepository.findById(nutritionProgramId)
+                        .orElseThrow(() -> new EntityNotFoundException("Nutrition Program not found.")));
     }
 }
-\
