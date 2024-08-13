@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:13
+    container_name: power-nutri-db
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: powernutri
+    ports:
+        - "5432:5432"
+
+networks:
+  quote:
+    driver: bridge
