@@ -37,8 +37,6 @@ Navegue até a raiz do projeto.
 Execute o seguinte comando para iniciar o banco de dados:
 
 ``
-bash
-Copy code
 docker-compose up -d
 ``
 
